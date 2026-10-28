@@ -54,6 +54,12 @@ public class Main {
         }
     }
 
+    public static int validateA(int x) {
+        if (x <= 0) {
+            return x;
+        } else {
+            throw new IllegalArgumentException();
+        }
     public static int validateB(int i){
         if(i < 0){
             throw new IllegalArgumentException();
