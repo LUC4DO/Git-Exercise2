@@ -11,6 +11,7 @@ public class Main {
         IO.println(parseDoubleB("12.5"));
         IO.println(parseDoubleA("15.5"));
         IO.println(validateA(-5));
+        IO.println(validateB(1));
     }
 
     public static int maxB(int val1, int val2) {
@@ -51,5 +52,11 @@ public class Main {
         } else {
             throw new IllegalArgumentException();
         }
+    }
+
+    public static int validateB(int i){
+        if(i < 0){
+            throw new IllegalArgumentException();
+        }else return i;
     }
 }
