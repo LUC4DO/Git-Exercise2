@@ -12,6 +12,11 @@ public class Main {
         IO.println(parseDoubleA("15.5"));
         IO.println(validateA(-5));
         IO.println(validateB(1));
+        try {
+            IO.println(validateB(-10));
+        } catch (IllegalArgumentException e) {
+            IO.println(e.getMessage());
+        }
     }
 
     public static int maxB(int val1, int val2) {
@@ -52,9 +57,10 @@ public class Main {
         } else {
             throw new IllegalArgumentException();
         }
+    }
     public static int validateB(int i){
         if(i < 0){
-            throw new IllegalArgumentException();
+            throw new IllegalArgumentException("Number can't be less than 0");
         }else return i;
     }
 }
