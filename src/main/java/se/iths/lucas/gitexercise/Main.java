@@ -10,10 +10,15 @@ public class Main {
         IO.println(parseIntA("77"));
         IO.println(parseDoubleB("12.5"));
         IO.println(parseDoubleA("15.5"));
-        IO.println(validateA(-5));
+        IO.println(validateA(6));
         IO.println(validateB(1));
         try {
             IO.println(validateB(-10));
+        } catch (IllegalArgumentException e) {
+            IO.println(e.getMessage());
+        }
+        try {
+            IO.println(validateA(-5));
         } catch (IllegalArgumentException e) {
             IO.println(e.getMessage());
         }
@@ -58,9 +63,10 @@ public class Main {
             throw new IllegalArgumentException();
         }
     }
-    public static int validateB(int i){
-        if(i < 0){
+
+    public static int validateB(int i) {
+        if (i < 0) {
             throw new IllegalArgumentException("Number can't be less than 0");
-        }else return i;
+        } else return i;
     }
 }
