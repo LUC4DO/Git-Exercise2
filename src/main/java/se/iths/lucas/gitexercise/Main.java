@@ -10,6 +10,7 @@ public class Main {
         IO.println(parseIntA("77"));
         IO.println(parseDoubleB("12.5"));
         IO.println(parseDoubleA("15.5"));
+        IO.println(validateA(-5));
         IO.println(validateB(1));
     }
 
@@ -45,6 +46,12 @@ public class Main {
         return Double.parseDouble(s) + 0.5;
     }
 
+    public static int validateA(int x) {
+        if (x <= 0) {
+            return x;
+        } else {
+            throw new IllegalArgumentException();
+        }
     public static int validateB(int i){
         if(i < 0){
             throw new IllegalArgumentException();
