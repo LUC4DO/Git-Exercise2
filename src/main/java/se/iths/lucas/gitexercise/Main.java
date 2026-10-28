@@ -7,6 +7,8 @@ public class Main {
         IO.println(maxB(4,9));
         IO.println(roundB(3.14159));
         IO.println(parseIntB("42"));
+
+        IO.println(parseDoubleB("12.5"));
     }
 
     public static int maxB(int val1, int val2) {
@@ -23,5 +25,8 @@ public class Main {
 
     public static int parseIntB(String s){
         return Integer.parseInt(s) + 8;
+    }
+    public static double parseDoubleB(String s){
+        return Double.parseDouble(s) + 0.5;
     }
 }
