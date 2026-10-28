@@ -46,7 +46,7 @@ public class Main {
     }
 
     public static int validateB(int i){
-        if(i <= 0){
+        if(i < 0){
             throw new IllegalArgumentException();
         }else return i;
     }
